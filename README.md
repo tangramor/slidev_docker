@@ -10,7 +10,7 @@ docker run --name slidev --rm -it \
     tangramor/slidev:latest
 ```
 
-If your work folder is empty, it will generate an template `slides.md` and other related files under your work folder, and launch the server on port `3030`. 
+If your work folder is empty, it will generate a template `slides.md` and other related files under your work folder, and launch the server on port `3030`. 
 
 You can access your slides from http://localhost:3030/
 
