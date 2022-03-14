@@ -1,6 +1,6 @@
 # Slidev Docker image
 
-work with [Slidev](https://sli.dev/). Just run following command in your work folder:
+Work with [Slidev](https://sli.dev/). Just run following command in your work folder:
 
 ```bash
 docker run --name slidev --rm -it \
@@ -26,7 +26,7 @@ ADD . /slidev
 
 ```
 
-Create the docker image: `docker build -t myppt .`.
+Create the docker image: `docker build -t myppt .`
 
 And run the container: `docker run --name myslides --rm --user node -p 3030:3030 myppt`
 
@@ -52,7 +52,7 @@ COPY dist /usr/share/nginx/html
 
 ```
 
-Create the docker image: `docker build -t mystaticppt .`.
+Create the docker image: `docker build -t mystaticppt .`
 
 And run the container: `docker run --name myslides --rm -p 80:80 mystaticppt`
 
