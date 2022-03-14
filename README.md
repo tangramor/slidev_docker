@@ -30,7 +30,7 @@ Create the docker image: `docker build -t myppt .`
 
 And run the container: `docker run --name myslides --rm --user node -p 3030:3030 myppt`
 
-You can visit your slids from http://localhost:3030/
+You can visit your slides from http://localhost:3030/
 
 
 ## Build hostable SPA (Single Page Application)
