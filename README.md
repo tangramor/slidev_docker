@@ -35,9 +35,9 @@ You can visit your slides from http://localhost:3030/
 
 ## Build hostable SPA (Single Page Application)
 
-Run command `docker exec -i slidev npx slidev build` on the runing container `slidev`. It will generate static HTML files under `dist` folder.
+Run command `docker exec -i slidev npx slidev build` on the running container `slidev`. It will generate static HTML files under `dist` folder.
 
-You can host `dist` in a static web site such as Github pages or Gitlab pages. You can also host it by your self:
+You can host `dist` in a static web site such as Github pages or Gitlab pages. You can also host it by yourself:
 
 ```bash
 docker run --name myslides --rm -p 80:80 -v ${PWD}/dist:/usr/share/nginx/html nginx:alpine
