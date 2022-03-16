@@ -37,7 +37,9 @@ You can visit your slides from http://localhost:3030/
 
 Run command `docker exec -i slidev npx slidev build` on the running container `slidev`. It will generate static HTML files under `dist` folder.
 
-You can host `dist` in a static web site such as Github pages or Gitlab pages. You can also host it by yourself:
+You can host `dist` in a static web site such as [Github pages](https://tangramor.github.io/slidev_docker/) or Gitlab pages. Because in Github pages the url may contain subfolder, so you need to modify the generated `index.html` to change `href="/assets/xxx` to `href="./assets/xxx`. And to avoid Jekyll build process, you need to add an empty file `.nojekyll`.
+
+You can also host it by yourself:
 
 ```bash
 docker run --name myslides --rm -p 80:80 -v ${PWD}/dist:/usr/share/nginx/html nginx:alpine
