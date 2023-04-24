@@ -1,4 +1,4 @@
-FROM node:17-alpine3.15
+FROM node:18-alpine
 
 COPY entrypoint.sh /
 
