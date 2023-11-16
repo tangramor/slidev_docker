@@ -6,7 +6,7 @@ if [ -f /slidev/slides.md ]; then
     if [ -d /slidev/node_modules ]; then
         npm update
     else
-        npm install
+        npm install @slidev/cli @slidev/theme-default @slidev/theme-seriph
     fi
     echo "Start slidev..."
     npx slidev --remote
