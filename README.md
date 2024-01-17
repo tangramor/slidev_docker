@@ -15,6 +15,24 @@ If your work folder is empty, it will generate a template `slides.md` and other 
 You can access your slides from http://localhost:3030/
 
 
+## Exportable docker image
+
+To support the export feature, there is a bigger docker image with tag **playwright**. Just run following command in your work folder:
+
+```bash
+docker run --name slidev -d --rm -it \
+    -v ${PWD}:/slidev \
+    -p 3030:3030 \
+    tangramor/slidev:playwright
+```
+
+Then you can use the [export feature](https://sli.dev/guide/exporting) of Slidev like following under your work folder:
+
+```bash
+docker exec -i slidev npx slidev export --timeout 2m --output slides.pdf
+```
+
+
 ## Build deployable image
 
 Or you can create your own slidev project to a docker image with Dockerfile:

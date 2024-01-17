@@ -2,3 +2,5 @@ node_modules
 package*
 slides.md
 *.swp
+backup
+*.pdf
