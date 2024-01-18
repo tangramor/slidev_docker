@@ -12,6 +12,7 @@ WORKDIR /slidev
 RUN chmod +x /entrypoint_playwright.sh \
     && if [ "$DEB_MIRROR" != "" ]; then sed -i 's/deb.debian.org/'${DEB_MIRROR}'/g' /etc/apt/sources.list.d/debian.sources; fi \
     && if [ "$NPM_MIRROR" != "" ]; then npm config set registry ${NPM_MIRROR}; fi \
-    && npx playwright install-deps
+    && npx playwright install-deps \
+    && if [ "$DEB_MIRROR" != "" ]; then sed -i 's/'${DEB_MIRROR}'/deb.debian.org/g' /etc/apt/sources.list.d/debian.sources; fi
 
 ENTRYPOINT [ "/entrypoint_playwright.sh" ]

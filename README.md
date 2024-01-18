@@ -7,8 +7,11 @@ docker run --name slidev --rm -it \
     --user node \
     -v ${PWD}:/slidev \
     -p 3030:3030 \
+    -e NPM_MIRROR="https://registry.npmmirror.com" \
     tangramor/slidev:latest
 ```
+
+***Note***: You can use `NPM_MIRROR` to specify a npm mirror to speed up the installation process.
 
 If your work folder is empty, it will generate a template `slides.md` and other related files under your work folder, and launch the server on port `3030`. 
 
@@ -23,6 +26,7 @@ To support the export feature, there is a bigger docker image with tag **playwri
 docker run --name slidev -d --rm -it \
     -v ${PWD}:/slidev \
     -p 3030:3030 \
+    -e NPM_MIRROR="https://registry.npmmirror.com" \
     tangramor/slidev:playwright
 ```
 
@@ -101,8 +105,11 @@ docker run --name slidev --rm -it \
     --user node \
     -v ${PWD}:/slidev \
     -p 3030:3030 \
+    -e NPM_MIRROR="https://registry.npmmirror.com" \
     tangramor/slidev:latest
 ```
+
+***注意***：你可以用 `NPM_MIRROR` 环境变量来指定一个 npm 镜像以加速安装过程。
 
 如果你的工作目录为空，容器会在目录下自动创建 `slides.md` 文件和其它相关文件，并基于 `3030` 端口启动 slidev 服务。
 
@@ -118,6 +125,7 @@ docker run --name slidev --rm -it \
 docker run --name slidev -d --rm -it \
     -v ${PWD}:/slidev \
     -p 3030:3030 \
+    -e NPM_MIRROR="https://registry.npmmirror.com" \
     tangramor/slidev:playwright
 ```
 
