@@ -9,6 +9,8 @@ ARG NPM_MIRROR=""
 
 WORKDIR /slidev
 
+ENV CHOKIDAR_USEPOLLING=true
+
 RUN chmod +x /entrypoint_playwright.sh \
     && if [ "$DEB_MIRROR" != "" ]; then sed -i 's/deb.debian.org/'${DEB_MIRROR}'/g' /etc/apt/sources.list.d/debian.sources; fi \
     && if [ "$NPM_MIRROR" != "" ]; then npm config set registry ${NPM_MIRROR}; fi \

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker run --name slidev -d --rm -it \
+docker run --name slidev --rm -it \
     --user node \
     -v ${PWD}:/slidev \
     -p 3030:3030 \
