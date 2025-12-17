@@ -5,4 +5,4 @@ docker run --name slidev --rm -it \
     -v ${PWD}:/slidev \
     -p 3030:3030 \
     -e NPM_MIRROR="https://registry.npmmirror.com" \
-    tangramor/slidev:latest
+    tangramor/slidev:node25.2.1
